@@ -107,9 +107,9 @@ int MIDIFileLoader::loadFile(std::string& filename){
 						
 					case MIDI_SET_TEMPO:
 					{
-						int m0 = j->getMetaMessage()[0];
-						int m1 = j->getMetaMessage()[1];
-						int m2 = j->getMetaMessage()[2];
+						unsigned char m0 = j->getMetaMessage()[0];
+						unsigned char m1 = j->getMetaMessage()[1];
+						unsigned char m2 = j->getMetaMessage()[2];
 						long tempo = (((m0 << 8) + m1) << 8) + m2;
 						//if (printMidiInfo)
 						std::cout << "tempo data: " << tempo << endl;
